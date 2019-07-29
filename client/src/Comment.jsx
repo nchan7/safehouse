@@ -1,5 +1,8 @@
 import React from 'react';
 import './App.css';
+import {
+    Link
+} from 'react-router-dom'
 
 class Comment extends React.Component {
     constructor(props) {
@@ -29,14 +32,19 @@ class Comment extends React.Component {
     }
 
     return () {
-        <form>
-            <p>Enter email:</p>
-            <input name='email' placeholder="enter email here..." type="text"/>
-            <p>Enter message for local politician</p>
-            <input name='comment' placeholder={this.state.comment} type="text"/>
-            <p>Or send a message through your own email to John Cena, Commercial and Residential City Building Coordinator by going to <a>JohnCena@SeattleGov.com</a></p>
-            <input type="submit" value={this.state.email} />
-        </form>
+        <div>
+            <form>
+                <p>Enter email:</p>
+                <input name='email' placeholder="enter email here..." type="text"/>
+                <p>Enter message for local politician</p>
+                <input name='comment' placeholder={this.state.comment} type="text"/>
+                <p>Or send a message through your own email to John Cena, Commercial and Residential City Building Coordinator by going to <a>JohnCena@SeattleGov.com</a></p>
+                <input type="submit" value={this.state.email} />
+            </form>
+            <Link to="/nextsteps" className="link"><button className='button'>What can I do now?</button></Link>
+        </div>
     }
 }
+
+
 export default Comment;
