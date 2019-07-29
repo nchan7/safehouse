@@ -3,8 +3,8 @@ import './App.css';
 
 class Comment extends React.Component {
     constructor(props) {
-      super(props);
-      this.state = {
+        super(props);
+        this.state = {
         email: '',
         comment: "Dear Local representative, please change some laws so I don't get crushed by one of these buildings...k thx. bye..."
         }
