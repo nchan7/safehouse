@@ -16,7 +16,7 @@ class Comment extends React.Component {
 
 
     handleSubmitEmail(e) {
-        e.preventDefault(e);
+        e.preventDefault();
     }
 
     handleEmailChange(e) {
@@ -25,13 +25,14 @@ class Comment extends React.Component {
         })
     }
 
-    handleCommentChange() {
+    handleCommentChange(e) {
         this.setState({
             comment: e.target.value
         })
     }
 
-    return () {
+    render () {
+        return (
         <div>
             <form>
                 <p>Enter email:</p>
@@ -43,6 +44,7 @@ class Comment extends React.Component {
             </form>
             <Link to="/nextsteps" className="link"><button className='button'>What can I do now?</button></Link>
         </div>
+        )
     }
 }
 
