@@ -1,3 +1,44 @@
+body {
+  text-align: center; 
+  margin: 0 auto; 
+  background-image: url('./img/background.jpg');
+  background-attachment: fixed;
+  background-size: cover; 
+  color: white; 
+  font-family: 'Raleway', sans-serif;
+}
+
+nav {
+  background: rgba(51, 51, 51, 0.5);
+}
+
+.home{
+  background: rgba(51, 51, 51, 0.5);
+  margin: 50px 0; 
+  padding: 50px; 
+}
+
+
+.button {
+  background-color: lightblue; 
+  width: 150px;
+  height: 30px; 
+}
+
+.button:hover {
+  background-color: slategray;
+  transform: scale(1.1);
+}
+
+h2 {
+  font-size: 75px;
+}
+
+h4 {
+  font-size: 40px;
+}
+
+
 .App {
   text-align: center;
 }
