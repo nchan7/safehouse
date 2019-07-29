@@ -62,8 +62,9 @@ class safeHouse extends Component {
 
   render() {
     let adress = this.state.adress
+    let city = this.state.city
     return (
-      <div class = 'container'>
+      <div className = 'container'>
         <form onSubmit={this.handleSubmit}>
         <p>
           
