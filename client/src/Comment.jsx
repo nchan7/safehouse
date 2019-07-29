@@ -13,7 +13,7 @@ class Comment extends React.Component {
 
 
     handleSubmitEmail(e) {
-        e.preventDefault(e);
+        e.preventDefault();
     }
 
     handleEmailChange(e) {
@@ -22,13 +22,15 @@ class Comment extends React.Component {
         })
     }
 
-    handleCommentChange() {
+    handleCommentChange(e) {
         this.setState({
             comment: e.target.value
         })
     }
 
-    return () {
+    render () {
+        return (
+
         <form>
             <p>Enter email:</p>
             <input name='email' placeholder="enter email here..." type="text"/>
@@ -37,6 +39,7 @@ class Comment extends React.Component {
             <p>Or send a message through your own email to John Cena, Commercial and Residential City Building Coordinator by going to <a>JohnCena@SeattleGov.com</a></p>
             <input type="submit" value={this.state.email} />
         </form>
+        )
     }
 }
 export default Comment;

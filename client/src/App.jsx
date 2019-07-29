@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Show from './Show';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -7,6 +6,8 @@ import {
   Link
 } from 'react-router-dom';
 import Home from './Home';
+import Show from './Show';
+import Comment from './Comment';
 
 
 class App extends React.Component {
@@ -18,18 +19,15 @@ class App extends React.Component {
     
     return (
       <>
-        <div className='Container'>
-            <Show></Show>
-          </div>
       <Router>
         <nav>
-          <Link to='/'> Safehouse!</Link>
-          <Link to='/search'>Search</Link>
-          <Link to='/comment'>Comment</Link>
+          <Link className='link' to='/'> Safehouse!</Link>
+          <Link className='link' to='/search'>Search</Link>
+          <Link className='link' to='/comment'>Reach Out</Link>
         </nav>
         <Route exact path="/" component={Home} />
-        {/* <Route exact path="/" component={Home} /> */}
-        {/* <Route exact path="/" component={Home} /> */}
+        <Route exact path="/search" component={Show} />
+        <Route exact path="/comment" component={Comment} />
       </Router>
       </>
     )
