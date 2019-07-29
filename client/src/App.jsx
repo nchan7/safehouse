@@ -61,7 +61,7 @@ class safeHouse extends Component {
   }
 
   render() {
-    
+    let adress = this.state.adress
     return (
       <div class = 'container'>
         <form onSubmit={this.handleSubmit}>
