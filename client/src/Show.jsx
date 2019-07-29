@@ -1,5 +1,10 @@
 import React,{Component} from 'react';
 import axios from 'axios'
+import img1 from './img/dial-01.png'
+import img2 from './img/dial-02.png'
+import img3 from './img/dial-03.png'
+import img4 from './img/dial-04.png'
+
 import './App.css';
 
 class Show extends Component {
@@ -72,21 +77,26 @@ render() {
 
   var contents
   if ( preliminary_risk_category === 'Critical Risk'){
-    conents=(
-      <img src="" alt=""/>
-    );
-  }else (preliminary_risk_category ==='High Risk'){
     contents=(
-      <img src='' alt />
+      <img src={img4} alt="really bad"/>
     );
-  }else (preliminary_risk_category === 'Medium Risk') {
+  }else if (preliminary_risk_category ==='High Risk'){
     contents=(
-      <img src = '' alt='' />
-    )
+      <img src={img3} alt='high risk' />
+    );
+  }else if (preliminary_risk_category === 'Medium Risk') {
+    contents=(
+      <img src = {img2} alt='medium risk' />
+    );
+  }else if (preliminary_risk_category === " ") {
+    contents=(
+      <>
+        <img src ={img1} alt = 'nodata'/>
+        <p>No Data Available</p>
+      </>
+    );
+  }
 
-}
-
-}
 
   return (
     <div className = 'container'>
@@ -97,6 +107,7 @@ render() {
             <input type="text" onChange={this.handleChange} />
           </label>
           <input type="submit" value="Look up Risk!" />
+          
         <div >
           <h4>{address}</h4>
           <h4>year built:{year_built}</h4>
@@ -105,13 +116,16 @@ render() {
           <h4>{state}</h4>
           <h4>{zip_code}</h4>
           <h4>{preliminary_risk_category}</h4>
-          <div>{content}</div>
+          <div>{contents}</div>
         </div>
+        
         </form>
     </div>
   )
 }
+
 }
+
 
 
 export default Show;
