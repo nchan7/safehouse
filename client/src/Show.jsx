@@ -42,9 +42,7 @@ handleSubmit = (event) => {
     let  no_stories = result.data[0].no_stories;
     let building_use = result.data[0].building_use;
     let estimated_number_of_occupants = result.data[0].estimated_number_of_occupants;
-    
-    
-    
+      
       this.setState({
         preliminary_risk_category,
         neighborhood,
@@ -63,31 +61,11 @@ handleSubmit = (event) => {
 
 render() {
   let address = this.state.address
-  let year_built = this.state.year_built
   let neighborhood = this.state.neighborhood
   let city = this.state.city
   let state = this.state.state
   let zip_code = this.state.zip_code
   let preliminary_risk_category = this.state.preliminary_risk_category
-
-  var contents
-  if ( preliminary_risk_category === 'Critical Risk'){
-    conents=(
-      <img src="" alt=""/>
-    );
-  }else (preliminary_risk_category ==='High Risk'){
-    contents=(
-      <img src='' alt />
-    );
-  }else (preliminary_risk_category === 'Medium Risk') {
-    contents=(
-      <img src = '' alt='' />
-    )
-
-}
-
-}
-
   return (
     <div className = 'container'>
       <form onSubmit={this.handleSubmit}>
@@ -99,13 +77,11 @@ render() {
           <input type="submit" value="Look up Risk!" />
         <div >
           <h4>{address}</h4>
-          <h4>year built:{year_built}</h4>
           <h4>{neighborhood}</h4>
           <h4>{city}</h4>
           <h4>{state}</h4>
           <h4>{zip_code}</h4>
           <h4>{preliminary_risk_category}</h4>
-          <div>{content}</div>
         </div>
         </form>
     </div>
