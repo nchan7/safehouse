@@ -4,8 +4,9 @@ import img1 from './img/dial-01.png'
 import img2 from './img/dial-02.png'
 import img3 from './img/dial-03.png'
 import img4 from './img/dial-04.png'
-
 import './App.css';
+var contents
+
 
 class Show extends Component {
   constructor(props) {
@@ -22,10 +23,9 @@ class Show extends Component {
         no_stories: " ",
         building_use : " ",
         estimated_number_of_occupants: " "
+      }
     }
-  }
-
-  handleChange = (event) => {
+    handleChange = (event) => {
     this.setState({address: event.target.value});
     console.log( " your adress is " + this.state.adress);
   }
@@ -36,6 +36,15 @@ class Show extends Component {
     let address = this.state.address
     axios.get(`https://data.seattle.gov/resource/54qs-2h7f.json?address=${this.state.address}`).then(result =>{
     
+    if (result.data[0].preliminary_risk_category===undefined){
+    contents=(
+      <>
+        <img src ={img1} alt = 'nodata'/>
+        <p>No Data Available</p>
+      </>
+    )
+    }else{
+
 
       let preliminary_risk_category = result.data[0].preliminary_risk_category;
       let neighborhood = result.data[0].neighborhood;
@@ -59,6 +68,7 @@ class Show extends Component {
         building_use ,
         estimated_number_of_occupants
       })
+    }
     })
     // Your state updates go under function(json)
   }
@@ -73,7 +83,6 @@ render() {
     let preliminary_risk_category = this.state.preliminary_risk_category
 
 
-  var contents
   if ( preliminary_risk_category === 'Critical Risk'){
     contents=(
       <img src={img4} alt="really bad"/>
@@ -86,14 +95,8 @@ render() {
     contents=(
       <img src = {img2} alt='medium risk' />
     );
-  }else if (preliminary_risk_category === " ") {
-    contents=(
-      <>
-        <img src ={img1} alt = 'nodata'/>
-        <p>No Data Available</p>
-      </>
-    );
   }
+  
 
 
   return (
@@ -101,20 +104,25 @@ render() {
       <form onSubmit={this.handleSubmit}>
           
           <label>
-            Please enter your adress:
+            Please enter your address:
             <input type="text" onChange={this.handleChange} />
           </label>
           <input type="submit" value="Look up Risk!" />
           
-        <div >
-          <h4>{address}</h4>
-          <h4>year built:{year_built}</h4>
-          <h4>{neighborhood}</h4>
-          <h4>{city}</h4>
-          <h4>{state}</h4>
-          <h4>{zip_code}</h4>
-          <h4>{preliminary_risk_category}</h4>
-          <div>{contents}</div>
+        <div className="informationContainer">
+          <div className='locationcontainer'>
+            <h4>Address{address}</h4>
+            <h4>City{city},{state}{zip_code}</h4>
+            <h4>Neighboorhood{neighborhood}</h4>
+            <h4>Zip-Code{zip_code}</h4>
+            <h4>Year-Built{year_built}</h4>
+          </div>
+          
+          <div className="riskContainer">
+            <h4>{preliminary_risk_category}</h4>
+            <div>{contents}</div>
+          </div>
+          
         </div>
         
         </form>
