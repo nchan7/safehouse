@@ -46,9 +46,6 @@ class Show extends Component {
       </>
     )
     }else{
-
-
-
       let preliminary_risk_category = result.data[0].preliminary_risk_category;
       let neighborhood = result.data[0].neighborhood;
       let address = result.data[0].adress;
@@ -77,6 +74,24 @@ class Show extends Component {
     }
     })
     // Your state updates go under function(json)
+  }
+  resetForm = (event)=>{
+    this.setState({
+      
+        // Your required states here
+            preliminary_risk_category: " ",
+            neighborhood: " ",
+            address: " ",
+            city : " ",
+            zip_code: " ",
+            state: " ",
+            year_built:" ",
+            no_stories: " ",
+            building_use : " ",
+            estimated_number_of_occupants: " ",
+            coordinates: []
+          }
+    )
   }
 
 render() {
@@ -156,7 +171,7 @@ render() {
       <form onSubmit={this.handleSubmit}>
         <label>
             Please enter your address:
-            <input type="text" onChange={this.handleChange} />
+            <input type="text" onChange={this.handleChange} onClick={this.resetForm} />
           </label>
             <input type="submit" value="Look up Risk!" />
       </form>
