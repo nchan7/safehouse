@@ -1,3 +1,8 @@
+nav {
+  background: rgba(51, 51, 51, 0.5);
+  font-family: 'Raleway', sans-serif;
+}
+
 body {
   text-align: center; 
   margin: 0 auto; 
@@ -5,11 +10,6 @@ body {
   background-attachment: fixed;
   background-size: cover; 
   color: white; 
-  font-family: 'Raleway', sans-serif;
-}
-
-nav {
-  background: rgba(51, 51, 51, 0.5);
   font-family: 'Raleway', sans-serif;
 }
 
@@ -28,9 +28,14 @@ nav {
 
 
 .button {
-  background-color: lightblue; 
-  width: 150px;
-  height: 30px; 
+  background-color: #00A17B; 
+  width: 250px;
+  height: 40px; 
+  margin: 20px; 
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px; 
+  color: white; 
+  font-weight: 600; 
 }
 
 .button:hover {
@@ -44,6 +49,12 @@ h2 {
 
 h4 {
   font-size: 40px;
+}
+
+
+.image {
+  max-height: 900px;
+  max-width: 700px;
 }
 
 
