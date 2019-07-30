@@ -6,7 +6,7 @@ import {
   Link
 } from 'react-router-dom';
 import Home from './Home';
-import Show from './Show';
+import Search from './Search';
 import Comment from './Comment';
 
 
@@ -26,7 +26,7 @@ class App extends React.Component {
           <Link className='link' to='/comment'>Reach Out</Link>
         </nav>
         <Route exact path="/" component={Home} />
-        <Route exact path="/search" component={Show} />
+        <Route exact path="/search" component={Search} />
         <Route exact path="/comment" component={Comment} />
       </Router>
       </>
