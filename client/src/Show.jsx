@@ -23,7 +23,7 @@ class Show extends Component {
         no_stories: " ",
         building_use : " ",
         estimated_number_of_occupants: " ",
-        coordinates: []
+        
       }
     }
     handleChange = (event) => {
@@ -38,7 +38,7 @@ class Show extends Component {
     let address = this.state.address
     axios.get(`https://data.seattle.gov/resource/54qs-2h7f.json?address=${this.state.address}`).then(result =>{
     
-    if (result.data[0].preliminary_risk_category===undefined){
+    if  ( !(result.data.length)){
     contents=(
       <>
         <img src ={img1} alt = 'nodata'/>
@@ -59,7 +59,7 @@ class Show extends Component {
       let  no_stories = result.data[0].no_stories;
       let building_use = result.data[0].building_use;
       let estimated_number_of_occupants = result.data[0].estimated_number_of_occupants;
-      let coordinates = result.data[0].geocoded_column.coordinates
+      
 
       this.setState({
         preliminary_risk_category,
@@ -72,11 +72,29 @@ class Show extends Component {
         no_stories,
         building_use ,
         estimated_number_of_occupants,
-        coordinates
+        
       })
     }
     })
     // Your state updates go under function(json)
+  }
+  resetForm = (event)=>{
+    this.setState({
+      
+        // Your required states here
+            preliminary_risk_category: " ",
+            neighborhood: " ",
+            address: " ",
+            city : " ",
+            zip_code: " ",
+            state: " ",
+            year_built:" ",
+            no_stories: " ",
+            building_use : " ",
+            estimated_number_of_occupants: " ",
+            
+          }
+    )
   }
 
 render() {
@@ -95,11 +113,11 @@ render() {
       <>
         <div className="informationContainer">
           <div className='locationcontainer'>
-            <h4>Address{address}</h4>
-            <h4>City{city},{state}{zip_code}</h4>
-            <h4>Neighboorhood{neighborhood}</h4>
+            <h4>Address {address}</h4>
+            <h4>City {city},{state},{zip_code}</h4>
+            <h4>Neighboorhood: {neighborhood}</h4>
             <h4>Zip-Code{zip_code}</h4>
-            <h4>Year-Built{year_built}</h4>
+            <h4>Year-Built: {year_built}</h4>
           </div>
           <div className="riskContainer">
             <h4>{preliminary_risk_category}</h4>
@@ -107,6 +125,7 @@ render() {
           </div>
         </div>
         <img src={img4} alt="really bad"/>
+        <a href="./nextsteps"  className='button'>Next steps You can take</a>
       </>
     );
   }else if (preliminary_risk_category ==='High Risk'){
@@ -114,18 +133,18 @@ render() {
       <>
         <div className="informationContainer">
           <div className='locationcontainer'>
-            <h4>Address{address}</h4>
-            <h4>City{city},{state}{zip_code}</h4>
-            <h4>Neighboorhood{neighborhood}</h4>
-            <h4>Zip-Code{zip_code}</h4>
-            <h4>Year-Built{year_built}</h4>
+            <h4>Address: {address}</h4>
+            <h4>City: {city},{state},{zip_code}</h4>
+            <h4>Neighboorhood: {neighborhood}</h4>
+            <h4>Zip-Code: {zip_code}</h4>
+            <h4>Year-Built: {year_built}</h4>
           </div>
           <div className="riskContainer">
-            <h4>{preliminary_risk_category}</h4>
-            
+            <h4>{preliminary_risk_category}</h4>  
           </div>
         </div>
-      <img src={img3} alt='high risk' />
+        <img src={img3} alt='high risk' />
+        <a href="./nextsteps" className='button'>Next steps You can take</a>
       </>
     );
   }else if (preliminary_risk_category === 'Medium Risk') {
@@ -133,18 +152,18 @@ render() {
       <>
         <div className="informationContainer">
           <div className='locationcontainer'>
-            <h4>Address{address}</h4>
-            <h4>City{city},{state}{zip_code}</h4>
-            <h4>Neighboorhood{neighborhood}</h4>
-            <h4>Zip-Code{zip_code}</h4>
-            <h4>Year-Built{year_built}</h4>
+            <h4>Address: {address}</h4>
+            <h4>City: {city},{state},{zip_code}</h4>
+            <h4>Neighboorhood: {neighborhood}</h4>
+            <h4>Zipcode: {zip_code}</h4>
+            <h4>Year Built: {year_built}</h4>
           </div>
           <div className="riskContainer">
             <h4>{preliminary_risk_category}</h4>
-            
           </div>
         </div>
-      <img src = {img2} alt='medium risk' />
+        <img src = {img2} alt='medium risk' />
+        <a href="./nextsteps" className='button'>Next steps You can take</a>
       </>
     );
   }
@@ -155,12 +174,13 @@ render() {
     <div className = 'container'>
       <form onSubmit={this.handleSubmit}>
         <label>
-            Please enter your address:
-            <input type="text" onChange={this.handleChange} />
-          </label>
-            <input type="submit" value="Look up Risk!" />
+          <p>Please enter your address:</p>
+          <input type="text" className="searchbar" onChange={this.handleChange} onClick={this.resetForm} />
+        </label>
+        <input className='button' type="submit" value="Look up Risk!" />
+        
       </form>
-        <div>{contents}</div>
+      <div>{contents}</div>
     </div>
   )
 }

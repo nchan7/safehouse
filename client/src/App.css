@@ -1,18 +1,32 @@
 nav {
-  background: rgba(51, 51, 51, 0.5);
+  background: #c05521;
   font-family: 'Raleway', sans-serif;
-  padding: 30px;
-  margin-bottom: 20px;
+  padding: 20px;
+  margin-bottom: 25px;
+  font-size: 20px;
+  text-align: right; 
+  font-weight: 600; 
 }
 
 body {
   text-align: center; 
+  padding: 0 auto; 
   margin: 0 auto; 
-  background-image: url('./img/background.jpg');
   background-attachment: fixed;
-  background-size: cover; 
-  color: white; 
+  background-size: cover;
+  /* background-image: url('./img/background.jpg'); */
+  color: #20bae5; 
   font-family: 'Raleway', sans-serif;
+  font-weight: 900; 
+}
+
+.logo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin-top: -23px; 
+  margin-left: -40px; 
+  transform: scale(.4);
 }
 
 .link {
@@ -23,14 +37,14 @@ body {
 }
 
 .home{
-  background: rgba(51, 51, 51, 0.5);
+  /* background: rgba(51, 51, 51, 0.5); */
   margin: 50px 0; 
   padding: 50px; 
 }
 
 
 .button {
-  background-color: #c05521;
+  background-color: #20bae5;
   width: 250px;
   height: 40px; 
   margin: 20px; 
@@ -47,10 +61,14 @@ body {
 
 h2 {
   font-size: 75px;
+  font-weight: 900;
+  margin: 10px 0 0 0; 
 }
 
 h4 {
-  font-size: 40px;
+  font-size: 20px;
+  padding: 0; 
+  margin: 10px 0 50px 0; 
 }
 
 .map {
@@ -62,6 +80,7 @@ h4 {
 .image {
   max-height: 900px;
   max-width: 700px;
+  margin: 0 0 10px 0; 
 }
 
 
@@ -118,4 +137,32 @@ font-weight: bolder;
 
 .directemail {
   text-align: center;
+  font-size: 15px;
+}
+
+.email {
+  width: 200px;
+  height: 30px;
+  font-size: 15px;
+}
+
+p {
+  font-size: 30px;
+}
+
+.form {
+  max-width: 400px;
+  text-align: center; 
+  margin: 0 auto;
+}
+
+.searchbar {
+  width: 250px;
+  height: 30px;
+  font-size: 18px;
+}
+
+a {
+  padding: 15px;
+  text-decoration: none;
 }
