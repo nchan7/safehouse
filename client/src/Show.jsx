@@ -30,6 +30,7 @@ class Show extends Component {
     this.setState({address: event.target.value});
     console.log( " your adress is " + this.state.adress);
   }
+  
 
   handleSubmit = (event) => {
     // Your fetch here
@@ -47,6 +48,7 @@ class Show extends Component {
     }else{
 
 
+
       let preliminary_risk_category = result.data[0].preliminary_risk_category;
       let neighborhood = result.data[0].neighborhood;
       let address = result.data[0].adress;
@@ -58,6 +60,7 @@ class Show extends Component {
       let building_use = result.data[0].building_use;
       let estimated_number_of_occupants = result.data[0].estimated_number_of_occupants;
       let coordinates = result.data[0].geocoded_column.coordinates
+
       this.setState({
         preliminary_risk_category,
         neighborhood,
@@ -77,6 +80,7 @@ class Show extends Component {
   }
 
 render() {
+
     let address = this.state.address
     let year_built = this.state.year_built
     let neighborhood = this.state.neighborhood

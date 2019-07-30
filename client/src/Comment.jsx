@@ -9,7 +9,7 @@ class Comment extends React.Component {
         super(props);
         this.state = {
         email: '',
-        comment: "Dear Local representative, please change some laws so I don't get crushed by one of these buildings...k thx. bye..."
+        comment: "Dear xxxxxx xxxxxxxxx, I discovered my building has unreinforced masonry and is at risk for damage during an earthquake or other disaster. I'm concerned about the safety of the occupants of this buidling"
         }
     this.handleSubmitEmail = this.handleSubmitEmail.bind(this)
     }
@@ -35,12 +35,13 @@ class Comment extends React.Component {
         return (
         <div>
             <form>
-                <p>Enter email:</p>
+                <p>Write a letter to your Seattle City Council:</p>
                 <input name='email' placeholder="enter email here..." type="text"/>
                 <p>Enter message for local politician</p>
-                <input name='comment' placeholder={this.state.comment} type="text"/>
-                <p>Or send a message through your own email to John Cena, Commercial and Residential City Building Coordinator by going to <a>JohnCena@SeattleGov.com</a></p>
-                <input type="submit" value={this.state.email} />
+                <textarea rows='5' cols='50' name='comment' placeholder={this.state.comment} type="text"/>
+                <br/>
+                <input type="submit" className='button' value='Send' />
+                <p className='directemail'>Or send a message through your own email to John Cena, Commercial and Residential City Building Coordinator by going to <a>JohnCena@SeattleGov.com</a></p>
             </form>
             <Link to="/nextsteps" className="link"><button className='button'>What can I do now?</button></Link>
         </div>
