@@ -51,6 +51,11 @@ h4 {
   font-size: 40px;
 }
 
+.map {
+  text-align: center;
+  margin: 0 auto; 
+}
+
 
 .image {
   max-height: 900px;
