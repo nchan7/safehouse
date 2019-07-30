@@ -40,8 +40,8 @@ class Comment extends React.Component {
                 <p>Enter message for local political leader:</p>
                 <textarea rows='5' cols='50' name='comment' placeholder={this.state.comment} type="text"/>
                 <br/>
-                <input type="submit" className='button' value='Send' />
-                <p className='directemail'>Or send a message through your own email to Sally Bagshaw, Finance and Neighborhood Chair, by messaging <a>sally.bagshaw@seattle.gov</a></p>
+                <Link to='./nextsteps'><input type="submit" className='button' value='Send' /></Link>
+                <p className='directemail'>Or send a message through your own email to Sally Bagshaw, Finance and Neighborhood Chair, by messaging <a href='sally.bagshaw@seattle.gov'>sally.bagshaw@seattle.gov</a></p>
             </form>
             <Link to="/nextsteps" className="link"><button className='button'>What can I do now?</button></Link>
         </div>
