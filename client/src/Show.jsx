@@ -29,6 +29,7 @@ class Show extends Component {
     this.setState({address: event.target.value});
     console.log( " your adress is " + this.state.adress);
   }
+  
 
   handleSubmit = (event) => {
     // Your fetch here
@@ -46,16 +47,18 @@ class Show extends Component {
     }else{
 
 
-      let preliminary_risk_category = result.data[0].preliminary_risk_category;
-      let neighborhood = result.data[0].neighborhood;
-      let address = result.data[0].adress;
-      let city = result.data[0].city;
-      let zip_code = result.data[0].zip_code;
-      let state = result.data[0].state;
-      let year_built = result.data[0].year_built;
-      let  no_stories = result.data[0].no_stories;
-      let building_use = result.data[0].building_use;
-      let estimated_number_of_occupants = result.data[0].estimated_number_of_occupants;
+
+    let preliminary_risk_category = result.data[0].preliminary_risk_category;
+    let neighborhood = result.data[0].neighborhood;
+    let address = result.data[0].adress;
+    let city = result.data[0].city;
+    let zip_code = result.data[0].zip_code;
+    let state = result.data[0].state;
+    let year_built = result.data[0].year_built;
+    let  no_stories = result.data[0].no_stories;
+    let building_use = result.data[0].building_use;
+    let estimated_number_of_occupants = result.data[0].estimated_number_of_occupants;
+      
       this.setState({
         preliminary_risk_category,
         neighborhood,
@@ -74,6 +77,7 @@ class Show extends Component {
   }
 
 render() {
+
     let address = this.state.address
     let year_built = this.state.year_built
     let neighborhood = this.state.neighborhood
@@ -99,6 +103,7 @@ render() {
   
 
 
+
   return (
     <div className = 'container'>
       <form onSubmit={this.handleSubmit}>
@@ -109,6 +114,7 @@ render() {
           </label>
           <input type="submit" value="Look up Risk!" />
           
+
         <div className="informationContainer">
           <div className='locationcontainer'>
             <h4>Address{address}</h4>
@@ -123,6 +129,7 @@ render() {
             <div>{contents}</div>
           </div>
           
+
         </div>
         
         </form>
