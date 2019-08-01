@@ -1,10 +1,4 @@
 nav {
-<<<<<<< HEAD
-  
-  font-family: 'Raleway', sans-serif;
-  padding: 0px;
-  margin-bottom: 5px;
-=======
   background: #c05521;
   font-family: 'Raleway', sans-serif;
   padding: 20px;
@@ -12,7 +6,6 @@ nav {
   font-size: 20px;
   text-align: right; 
   font-weight: 600; 
->>>>>>> 3d428b52944f770cd33105df679d0c6466ebe649
 }
 
 body {

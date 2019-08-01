@@ -6,7 +6,7 @@ import {
   Link
 } from 'react-router-dom';
 import Home from './Home';
-import Search from './Search';
+import Show from './Show';
 import Comment from './Comment';
 import Next from './Next';
 import Logo from './img/SafeHouseLogo.png';
@@ -32,7 +32,7 @@ class App extends React.Component {
           <Link className='link' to='/nextsteps'>What Can I Do?</Link>
         </nav>
         <Route exact path="/" component={Home} />
-        <Route exact path="/search" component={Search} />
+        <Route exact path="/search" component={Show} />
         <Route exact path="/comment" component={Comment} />
         <Route exact path="/nextsteps" component={Next} />
       </Router>
