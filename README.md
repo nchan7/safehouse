@@ -1,9 +1,8 @@
-# SafeHouse🏠
-## grassroots initiative for earthquake safety
+# SafeHouse🏠 - grassroots initiative for earthquake safety
 
-## Check out a demo of the site here: 
+## Check out a demo of the site here: https://epic-shaw-f54583.netlify.com
 
-# Nathan Chan | July 29-30, 2019
+## Nathan Chan | July 29-30, 2019
 ## General Assembly - Two Day Hackathon
 ### Placed third overall
 ### Worked with two UX/UI designers and two other software developers
@@ -20,28 +19,63 @@ Our team spent the first hour generating a proposal and pitching the idea to our
 Since our team had a couple of designers, they took the lead in developing the wireframes, design, branding, and presentation. The developers turned those sketches and ideas and turned them into a reality. 
 
 ## URM API
+The data was pulled from the City of Seattle's URM API at the following link.
 
 https://data.seattle.gov/Permitting/Unreinforced-Masonry-Buildings/54qs-2h7f
 
 
 ## UX/UI 
+Our initial efforts were documented through whiteboarding and wireframe sketches. The design team provided the web developers with the wire frames of the pages that would tell the most compelling story. 
+
+#### Whiteboarding: 
+
+<img src="./src/img/Whiteboarding.jpg" height = 400px width = 600px>
+
+#### Wire Frames:
+
+Home Page:
+
+<img src="./src/img/Whiteboarding.jpg" height = 400px width = 600px>
+
+Risk Page:
+
+<img src="./src/img/Risk.jpg" height = 400px width = 600px>
+
+Letter Page:
+
+<img src="./src/img/Letter.jpg" height = 400px width = 600px>
+
 
 
 ## React.js
+The entire web app was built using React and React-Router-DOM to create our desired user experience. React was chosen since it is a frontend library which still utilizes Javascript and provides a Single Page Application to the user. This reduces the amount of time needed to render teh page.
+
+The Axios node library was used for the API call to retrieve the URM API database.
+
 
 
 # Live Demo and Presentation
+We presented our app, the motivation for it, and it's functionality to a panel of five judges as well as a an audience of 40. 
+
+[Hackathon Presentation](./src/presentation/HackathonPresentation.pdf)
 
 
 # Next Steps
-
+Our project team had many ideas to continue building out the functionality of the project. Some of them include: 
+1. Search Feature - including a drop down search featureas a user is typing
+2. Map - includes the location in question and a map of the locations of medium, high, and critical risk locations
+3. Email - providing a list of council members emails and contact information for users to quickly contact the appropriate person
 
 
 # Credit To 
+City of Seattle's Open Data as well as the General Assembly SEI-25 and UX/UI-26 Instructors
 
 
 
+---
 
+
+# The following info is generated with the Create-React-App node module
 
 
 
