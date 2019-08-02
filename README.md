@@ -1,12 +1,12 @@
-# SafeHouse🏠 - grassroots initiative for earthquake safety
+## SafeHouse🏠 - grassroots initiative for earthquake safety
 
-## Check out a demo of the site here: https://epic-shaw-f54583.netlify.com
+### Check out a demo of the site here: https://epic-shaw-f54583.netlify.com
 
-## Nathan Chan | July 29-30, 2019
-## General Assembly - Two Day Hackathon
-### Placed third overall
-### Worked with two UX/UI designers and two other software developers
-### The app was developed using the React.js framework. 
+### Nathan Chan | July 29-30, 2019
+General Assembly - Two Day Hackathon
+Placed third overall
+Worked with two UX/UI designers and two other software developers
+The app was developed using the React.js framework. 
 
 # Introduction
 Given the most recent earthquake in Monroe, WA and the increasing likelihood of earthquakes occuring in the Greater Seattle Area, our team created an app that would allow users to identified if their Unreinforced Masonry Building (URM) is at medium risk, high risk, or critical risk in an earthquake. The project pulled from the City of Seattle's Public URM API. 
