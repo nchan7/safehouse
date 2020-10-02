@@ -1,0 +1,189 @@
+nav {
+  background: #c05521;
+  font-family: 'Raleway', sans-serif;
+  padding: 20px;
+  margin-bottom: 25px;
+  font-size: 20px;
+  text-align: right; 
+  font-weight: 600; 
+}
+
+body {
+  text-align: center; 
+  padding: 0 auto; 
+  margin: 0 auto; 
+  background-attachment: fixed;
+  background-size: cover;
+  /* background-image: url('./img/background.jpg'); */
+  color: #20bae5; 
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900; 
+}
+
+.logo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin-top: -23px; 
+  margin-left: -40px; 
+  transform: scale(.4);
+}
+
+.link {
+  text-decoration: none; 
+  color: white; 
+  text-align: left;
+  padding: 10px 20px; 
+}
+
+.home{
+  /* background: rgba(51, 51, 51, 0.5); */
+  margin: 30px 0; 
+  padding: 10px; 
+}
+
+
+.button {
+  background-color: #20bae5;
+  width: 250px;
+  height: 40px; 
+  margin: 20px; 
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px; 
+  color: white; 
+  font-weight: 600; 
+  border-radius: 8px;
+}
+
+.button:hover {
+  background-color: slategray;
+  transform: scale(1.1);
+}
+
+h2 {
+  font-size: 75px;
+  font-weight: 900;
+  margin: 10px 0 0 0; 
+}
+
+h4 {
+  font-size: 20px;
+  padding: 0; 
+  margin: 10px 0 20px 0; 
+}
+
+.map {
+  text-align: center;
+  margin: 0 auto; 
+}
+
+
+.image {
+  max-height: 900px;
+  max-width: 700px;
+  margin: 0 0 10px 0; 
+}
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.locationcontainer{
+  color: black;
+  font-weight: 400;
+  text-align: left; 
+  margin: 0 200px 0 -30px;
+  float: left; 
+}
+.riskContainer{
+  color: black;
+  font-weight: bolder;
+
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.directemail {
+  text-align: center;
+  font-size: 15px;
+}
+
+.email {
+  width: 200px;
+  height: 30px;
+  font-size: 15px;
+}
+
+p {
+  font-size: 30px;
+}
+
+.form {
+  max-width: 400px;
+  text-align: center; 
+  margin: 0 auto;
+}
+
+.searchbar {
+  width: 250px;
+  height: 30px;
+  font-size: 18px;
+}
+
+a {
+  padding: 15px;
+  text-decoration: none;
+  margin: 5px;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px; 
+}
+
+h3 {
+  font-size: 30px;
+}
+.imageContainer {
+  padding: 10px;
+}
+
+.details {
+  display: inline-block; 
+}
+
+.nextsteps {
+  position: absolute; 
+  right: 185px; 
+  bottom: -70px; 
+}
